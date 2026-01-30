@@ -1,1 +1,93 @@
-[]
+[
+  {
+    "decision_id": "DEC-001",
+    "date": "2025-02-18",
+    "domain": "procurement",
+    "request_summary": "Proposal to purchase Vendor Alpha for centralized application performance monitoring across production systems.",
+    "constraints": {
+      "budget_usd": 320000,
+      "soc2_required": true,
+      "data_residency": "US"
+    },
+    "decision_outcome": "approved",
+    "rationale": "Vendor Alpha met all security and compliance requirements, including SOC 2 Type II certification, and the proposed cost fell within the approved budget threshold. No data residency risks were identified for US-hosted telemetry.",
+    "approver_role": ["Security", "IT Operations"],
+    "tags": ["monitoring", "observability", "production"]
+  },
+  {
+    "decision_id": "DEC-002",
+    "date": "2025-03-07",
+    "domain": "procurement",
+    "request_summary": "Request to approve Vendor Beta for log aggregation and analytics for EU customer environments.",
+    "constraints": {
+      "budget_usd": 480000,
+      "soc2_required": true,
+      "data_residency": "EU"
+    },
+    "decision_outcome": "rejected",
+    "rationale": "Vendor Beta was unable to guarantee EU-only data residency for customer logs and did not provide sufficient documentation regarding subprocessors. This posed an unacceptable compliance risk.",
+    "approver_role": ["Security", "Legal"],
+    "tags": ["logging", "compliance", "data-residency"]
+  },
+  {
+    "decision_id": "DEC-003",
+    "date": "2025-04-12",
+    "domain": "security",
+    "request_summary": "Approval of a new security policy requiring SOC 2 certification for all third-party vendors handling customer data.",
+    "constraints": {
+      "budget_usd": null,
+      "soc2_required": true,
+      "data_residency": "global"
+    },
+    "decision_outcome": "approved",
+    "rationale": "The policy standardizes vendor security requirements across the organization and aligns with existing compliance commitments. No operational blockers were identified.",
+    "approver_role": ["Security", "Legal"],
+    "tags": ["policy", "soc2", "vendor-risk"]
+  },
+  {
+    "decision_id": "DEC-004",
+    "date": "2025-05-03",
+    "domain": "procurement",
+    "request_summary": "Request to purchase Vendor Gamma for internal analytics tooling supporting product teams.",
+    "constraints": {
+      "budget_usd": 150000,
+      "soc2_required": false,
+      "data_residency": "US"
+    },
+    "decision_outcome": "approved",
+    "rationale": "The tool was limited to internal data only and did not process customer information. As a result, SOC 2 certification was not required under existing policy, and the cost was within discretionary spend limits.",
+    "approver_role": ["IT Operations"],
+    "tags": ["analytics", "internal-tools"]
+  },
+  {
+    "decision_id": "DEC-005",
+    "date": "2025-06-21",
+    "domain": "procurement",
+    "request_summary": "Proposal to approve Vendor Beta for log aggregation following updated contract terms.",
+    "constraints": {
+      "budget_usd": 510000,
+      "soc2_required": true,
+      "data_residency": "EU"
+    },
+    "decision_outcome": "override",
+    "rationale": "Despite prior rejection, Vendor Beta agreed to EU-only data storage and completed a third-party security audit. An exception was granted due to urgent operational needs, with a requirement for quarterly compliance reviews.",
+    "approver_role": ["Security", "Legal", "VP Engineering"],
+    "tags": ["logging", "override", "compliance-exception"]
+  },
+  {
+    "decision_id": "DEC-006",
+    "date": "2025-07-14",
+    "domain": "security",
+    "request_summary": "Decision to temporarily allow a non-SOC2-certified vendor for a time-limited proof of concept.",
+    "constraints": {
+      "budget_usd": 75000,
+      "soc2_required": true,
+      "data_residency": "US"
+    },
+    "decision_outcome": "override",
+    "rationale": "A limited exception was approved for a 60-day proof of concept involving synthetic data only. No customer data exposure was permitted, and the vendor will be reevaluated prior to any production use.",
+    "approver_role": ["Security"],
+    "tags": ["poc", "temporary-exception", "risk-managed"]
+  }
+]
+
