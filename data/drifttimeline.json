@@ -1,1 +1,39 @@
+[
+  {
+    "month": "2025-02",
+    "domain": "procurement",
+    "signal": "increase in expedited approvals",
+    "note": "Several vendor purchases were approved under accelerated timelines due to operational pressure, reducing time available for standard review."
+  },
+  {
+    "month": "2025-03",
+    "domain": "security",
+    "signal": "more security exceptions",
+    "note": "Multiple time-limited exceptions were granted for proof-of-concept vendors without full SOC 2 certification."
+  },
+  {
+    "month": "2025-04",
+    "domain": "procurement",
+    "signal": "increase in overrides",
+    "note": "Overrides increased compared to the previous quarter, primarily related to data residency and contract terms for log management vendors."
+  },
+  {
+    "month": "2025-05",
+    "domain": "security",
+    "signal": "repeat exceptions for similar vendors",
+    "note": "The same compliance gaps were observed across multiple vendor requests, suggesting recurring risk acceptance rather than isolated cases."
+  },
+  {
+    "month": "2025-06",
+    "domain": "procurement",
+    "signal": "higher average contract values",
+    "note": "Approved vendor contracts trended above historical averages, increasing financial and compliance exposure per decision."
+  },
+  {
+    "month": "2025-07",
+    "domain": "governance",
+    "signal": "policy drift risk",
+    "note": "The frequency of overrides and security exceptions indicates potential erosion of established vendor onboarding standards."
+  }
+]
 
