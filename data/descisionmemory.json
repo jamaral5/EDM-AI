@@ -88,6 +88,667 @@
     "rationale": "A limited exception was approved for a 60-day proof of concept involving synthetic data only. No customer data exposure was permitted, and the vendor will be reevaluated prior to any production use.",
     "approver_role": ["Security"],
     "tags": ["poc", "temporary-exception", "risk-managed"]
-  }
+  },
+{
+  "decision_id": "DEC-007",
+  "date": "2025-08-01",
+  "domain": "procurement",
+  "request_summary": "Renewal of Vendor Alpha for application performance monitoring services.",
+  "constraints": {
+    "budget_usd": 340000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Vendor Alpha continued to meet all security and compliance requirements with no material changes to service scope.",
+  "approver_role": ["IT Operations", "Security"],
+  "tags": ["renewal", "monitoring"]
+},
+{
+  "decision_id": "DEC-008",
+  "date": "2025-08-10",
+  "domain": "procurement",
+  "request_summary": "Request to onboard Vendor Delta for customer support analytics.",
+  "constraints": {
+    "budget_usd": 210000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "rejected",
+  "rationale": "Vendor Delta could not demonstrate sufficient anonymization of customer interaction data.",
+  "approver_role": ["Security", "Legal"],
+  "tags": ["support-tools", "privacy"]
+},
+{
+  "decision_id": "DEC-009",
+  "date": "2025-08-18",
+  "domain": "security",
+  "request_summary": "Approval of guidance limiting non-SOC2 vendors to internal-only tools.",
+  "constraints": {
+    "budget_usd": null,
+    "soc2_required": true,
+    "data_residency": "global"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Clarifies acceptable use of non-certified vendors and reduces ambiguity during vendor reviews.",
+  "approver_role": ["Security"],
+  "tags": ["policy", "vendor-risk"]
+},
+{
+  "decision_id": "DEC-010",
+  "date": "2025-08-27",
+  "domain": "procurement",
+  "request_summary": "Request to approve Vendor Beta for EU log retention to support compliance audits.",
+  "constraints": {
+    "budget_usd": 520000,
+    "soc2_required": true,
+    "data_residency": "EU"
+  },
+  "decision_outcome": "override",
+  "rationale": "Vendor Beta agreed to EU-only retention controls and enhanced monitoring. Exception approved due to audit requirements.",
+  "approver_role": ["Security", "Legal", "VP Engineering"],
+  "tags": ["override", "logging"]
+},
+{
+  "decision_id": "DEC-011",
+  "date": "2025-09-03",
+  "domain": "procurement",
+  "request_summary": "Purchase of Vendor Echo for experimentation analytics.",
+  "constraints": {
+    "budget_usd": 180000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Vendor processes aggregated metrics only and does not store customer identifiers.",
+  "approver_role": ["Product", "Security"],
+  "tags": ["experimentation", "analytics"]
+},
+{
+  "decision_id": "DEC-012",
+  "date": "2025-09-12",
+  "domain": "security",
+  "request_summary": "Decision to require written justification for all vendor policy overrides.",
+  "constraints": {
+    "budget_usd": null,
+    "soc2_required": false,
+    "data_residency": "global"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Increased override frequency necessitated stronger governance controls.",
+  "approver_role": ["Security", "Legal"],
+  "tags": ["governance", "overrides"]
+},
+{
+  "decision_id": "DEC-013",
+  "date": "2025-09-20",
+  "domain": "procurement",
+  "request_summary": "Request to onboard Vendor Foxtrot for internal analytics dashboards.",
+  "constraints": {
+    "budget_usd": 95000,
+    "soc2_required": false,
+    "data_residency": "US"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Tool is restricted to internal operational data only.",
+  "approver_role": ["IT Operations"],
+  "tags": ["internal-tools"]
+},
+{
+  "decision_id": "DEC-014",
+  "date": "2025-09-29",
+  "domain": "procurement",
+  "request_summary": "Proposal to expand Vendor Gamma usage to include limited customer metadata.",
+  "constraints": {
+    "budget_usd": 240000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "rejected",
+  "rationale": "Expanded scope introduced customer metadata processing without sufficient compliance documentation.",
+  "approver_role": ["Security"],
+  "tags": ["scope-change"]
+},
+{
+  "decision_id": "DEC-015",
+  "date": "2025-10-07",
+  "domain": "procurement",
+  "request_summary": "Time-limited proof of concept using Vendor Delta with synthetic data.",
+  "constraints": {
+    "budget_usd": 60000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "override",
+  "rationale": "Exception approved for a 45-day POC using synthetic data only.",
+  "approver_role": ["Security"],
+  "tags": ["poc", "override"]
+},
+{
+  "decision_id": "DEC-016",
+  "date": "2025-10-16",
+  "domain": "security",
+  "request_summary": "Approval of requirement for DPA execution prior to vendor onboarding.",
+  "constraints": {
+    "budget_usd": null,
+    "soc2_required": false,
+    "data_residency": "global"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Strengthens legal safeguards for vendors handling customer data.",
+  "approver_role": ["Legal"],
+  "tags": ["policy", "dpa"]
+},
+{
+  "decision_id": "DEC-017",
+  "date": "2025-10-25",
+  "domain": "procurement",
+  "request_summary": "Purchase of Vendor Hotel for incident alerting and on-call management.",
+  "constraints": {
+    "budget_usd": 125000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Vendor met operational and security requirements and replaced a legacy tool.",
+  "approver_role": ["IT Operations", "Security"],
+  "tags": ["incident-management"]
+},
+{
+  "decision_id": "DEC-018",
+  "date": "2025-11-02",
+  "domain": "procurement",
+  "request_summary": "Request to approve Vendor Beta for non-production EU environments.",
+  "constraints": {
+    "budget_usd": 130000,
+    "soc2_required": true,
+    "data_residency": "EU"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Usage restricted to non-production workloads with no customer data exposure.",
+  "approver_role": ["Security"],
+  "tags": ["non-production"]
+},
+{
+  "decision_id": "DEC-019",
+  "date": "2025-11-10",
+  "domain": "security",
+  "request_summary": "Decision to mandate quarterly reviews of all active vendor exceptions.",
+  "constraints": {
+    "budget_usd": null,
+    "soc2_required": false,
+    "data_residency": "global"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Improves visibility into accumulated risk from vendor exceptions.",
+  "approver_role": ["Security"],
+  "tags": ["governance", "risk-review"]
+},
+{
+  "decision_id": "DEC-020",
+  "date": "2025-11-18",
+  "domain": "procurement",
+  "request_summary": "Request to onboard Vendor India for customer survey distribution.",
+  "constraints": {
+    "budget_usd": 90000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "rejected",
+  "rationale": "Vendor could not provide adequate controls for customer contact data.",
+  "approver_role": ["Security", "Legal"],
+  "tags": ["surveys", "privacy"]
+},
+{
+  "decision_id": "DEC-021",
+  "date": "2025-11-27",
+  "domain": "procurement",
+  "request_summary": "Renewal of Vendor Echo with expanded feature usage.",
+  "constraints": {
+    "budget_usd": 210000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Expanded features remained within approved data handling scope.",
+  "approver_role": ["Product", "Security"],
+  "tags": ["renewal"]
+},
+{
+  "decision_id": "DEC-022",
+  "date": "2025-12-05",
+  "domain": "procurement",
+  "request_summary": "Emergency approval of Vendor Beta during production outage.",
+  "constraints": {
+    "budget_usd": 560000,
+    "soc2_required": true,
+    "data_residency": "EU"
+  },
+  "decision_outcome": "override",
+  "rationale": "Emergency exception granted to restore service availability with post-incident review required.",
+  "approver_role": ["Security", "VP Engineering"],
+  "tags": ["emergency", "override"]
+},
+{
+  "decision_id": "DEC-023",
+  "date": "2025-12-13",
+  "domain": "security",
+  "request_summary": "Formalization of escalation path for high-risk vendor approvals.",
+  "constraints": {
+    "budget_usd": null,
+    "soc2_required": false,
+    "data_residency": "global"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Provides clarity and consistency for high-impact decisions.",
+  "approver_role": ["Security", "Legal"],
+  "tags": ["governance"]
+},
+{
+  "decision_id": "DEC-024",
+  "date": "2025-12-22",
+  "domain": "procurement",
+  "request_summary": "Purchase of Vendor Juliet for internal knowledge base search.",
+  "constraints": {
+    "budget_usd": 110000,
+    "soc2_required": false,
+    "data_residency": "US"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Tool is limited to internal documentation with no customer data exposure.",
+  "approver_role": ["IT Operations"],
+  "tags": ["knowledge-management"]
+},
+{
+  "decision_id": "DEC-025",
+  "date": "2026-01-03",
+  "domain": "procurement",
+  "request_summary": "Proposal to expand Vendor Hotel usage to include customer-facing alerts.",
+  "constraints": {
+    "budget_usd": 260000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "rejected",
+  "rationale": "Customer-facing usage introduced data exposure risks not covered by existing agreements.",
+  "approver_role": ["Security"],
+  "tags": ["scope-change"]
+},
+{
+  "decision_id": "DEC-026",
+  "date": "2026-01-12",
+  "domain": "security",
+  "request_summary": "Approval of standardized exception expiration requirements.",
+  "constraints": {
+    "budget_usd": null,
+    "soc2_required": false,
+    "data_residency": "global"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Ensures exceptions are time-bound and reviewed.",
+  "approver_role": ["Security"],
+  "tags": ["policy", "exceptions"]
+},
+{
+  "decision_id": "DEC-027",
+  "date": "2026-01-21",
+  "domain": "procurement",
+  "request_summary": "Request to onboard Vendor Kilo for feature flag management.",
+  "constraints": {
+    "budget_usd": 175000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Vendor processes configuration data only.",
+  "approver_role": ["Engineering", "Security"],
+  "tags": ["feature-flags"]
+},
+{
+  "decision_id": "DEC-028",
+  "date": "2026-01-30",
+  "domain": "procurement",
+  "request_summary": "Follow-up request to approve Vendor Delta for production analytics.",
+  "constraints": {
+    "budget_usd": 230000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "rejected",
+  "rationale": "Previously identified anonymization gaps remain unresolved.",
+  "approver_role": ["Security", "Legal"],
+  "tags": ["follow-up", "rejection"]
+},
+{
+  "decision_id": "DEC-029",
+  "date": "2026-02-08",
+  "domain": "security",
+  "request_summary": "Decision to flag vendors with repeated policy exceptions for executive review.",
+  "constraints": {
+    "budget_usd": null,
+    "soc2_required": false,
+    "data_residency": "global"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Repeated exceptions indicate elevated risk and warrant senior leadership visibility.",
+  "approver_role": ["Security"],
+  "tags": ["governance", "vendor-risk"]
+},
+{
+  "decision_id": "DEC-030",
+  "date": "2026-02-15",
+  "domain": "procurement",
+  "request_summary": "Renewal of Vendor Alpha with updated pricing model.",
+  "constraints": {
+    "budget_usd": 360000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Pricing increase remained within approved thresholds and no compliance changes were identified.",
+  "approver_role": ["IT Operations", "Finance"],
+  "tags": ["renewal", "pricing"]
+},
+{
+  "decision_id": "DEC-031",
+  "date": "2026-02-22",
+  "domain": "procurement",
+  "request_summary": "Request to onboard Vendor Lima for customer feedback analysis.",
+  "constraints": {
+    "budget_usd": 140000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "rejected",
+  "rationale": "Vendor could not provide sufficient controls for handling free-text customer feedback containing potential PII.",
+  "approver_role": ["Security", "Legal"],
+  "tags": ["customer-feedback", "privacy"]
+},
+{
+  "decision_id": "DEC-032",
+  "date": "2026-03-01",
+  "domain": "procurement",
+  "request_summary": "Approval of Vendor Kilo renewal for feature flag management.",
+  "constraints": {
+    "budget_usd": 185000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Vendor continued to process configuration data only with no change in scope.",
+  "approver_role": ["Engineering", "Security"],
+  "tags": ["renewal", "feature-flags"]
+},
+{
+  "decision_id": "DEC-033",
+  "date": "2026-03-09",
+  "domain": "security",
+  "request_summary": "Decision to require explicit risk acceptance documentation for emergency vendor approvals.",
+  "constraints": {
+    "budget_usd": null,
+    "soc2_required": false,
+    "data_residency": "global"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Emergency approvals previously lacked consistent documentation, increasing audit risk.",
+  "approver_role": ["Security", "Legal"],
+  "tags": ["governance", "emergency"]
+},
+{
+  "decision_id": "DEC-034",
+  "date": "2026-03-16",
+  "domain": "procurement",
+  "request_summary": "Request to approve Vendor Beta for extended log retention in non-production EU environments.",
+  "constraints": {
+    "budget_usd": 160000,
+    "soc2_required": true,
+    "data_residency": "EU"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Retention applied only to non-production workloads with no customer data exposure.",
+  "approver_role": ["Security"],
+  "tags": ["logging", "non-production"]
+},
+{
+  "decision_id": "DEC-035",
+  "date": "2026-03-24",
+  "domain": "procurement",
+  "request_summary": "Proposal to onboard Vendor Mike for session replay analytics.",
+  "constraints": {
+    "budget_usd": 290000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "rejected",
+  "rationale": "Session replay capability introduced high risk of capturing sensitive user inputs.",
+  "approver_role": ["Security", "Legal"],
+  "tags": ["analytics", "privacy"]
+},
+{
+  "decision_id": "DEC-036",
+  "date": "2026-04-02",
+  "domain": "procurement",
+  "request_summary": "Approval of Vendor Alpha expansion to additional internal services.",
+  "constraints": {
+    "budget_usd": 390000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Expansion did not change data classification or exposure profile.",
+  "approver_role": ["IT Operations", "Security"],
+  "tags": ["expansion", "monitoring"]
+},
+{
+  "decision_id": "DEC-037",
+  "date": "2026-04-09",
+  "domain": "security",
+  "request_summary": "Decision to standardize compensating controls for data residency exceptions.",
+  "constraints": {
+    "budget_usd": null,
+    "soc2_required": false,
+    "data_residency": "global"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Standard controls improve consistency when approving limited residency exceptions.",
+  "approver_role": ["Security"],
+  "tags": ["policy", "data-residency"]
+},
+{
+  "decision_id": "DEC-038",
+  "date": "2026-04-17",
+  "domain": "procurement",
+  "request_summary": "Time-limited approval of Vendor Delta for sandbox analytics testing.",
+  "constraints": {
+    "budget_usd": 85000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "override",
+  "rationale": "Exception approved for sandbox use only with synthetic datasets.",
+  "approver_role": ["Security"],
+  "tags": ["sandbox", "override"]
+},
+{
+  "decision_id": "DEC-039",
+  "date": "2026-04-25",
+  "domain": "procurement",
+  "request_summary": "Request to onboard Vendor November for email delivery analytics.",
+  "constraints": {
+    "budget_usd": 155000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Vendor processed aggregate delivery metrics only with no customer identifiers stored.",
+  "approver_role": ["Marketing", "Security"],
+  "tags": ["email", "analytics"]
+},
+{
+  "decision_id": "DEC-040",
+  "date": "2026-05-03",
+  "domain": "security",
+  "request_summary": "Decision to require executive sign-off for overrides exceeding $500K.",
+  "constraints": {
+    "budget_usd": null,
+    "soc2_required": false,
+    "data_residency": "global"
+  },
+  "decision_outcome": "approved",
+  "rationale": "High-cost overrides present elevated financial and compliance risk.",
+  "approver_role": ["Security", "Finance"],
+  "tags": ["governance", "budget"]
+},
+{
+  "decision_id": "DEC-041",
+  "date": "2026-05-11",
+  "domain": "procurement",
+  "request_summary": "Renewal of Vendor Echo following security review.",
+  "constraints": {
+    "budget_usd": 220000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Security review confirmed no change in data processing practices.",
+  "approver_role": ["Product", "Security"],
+  "tags": ["renewal", "analytics"]
+},
+{
+  "decision_id": "DEC-042",
+  "date": "2026-05-19",
+  "domain": "procurement",
+  "request_summary": "Request to onboard Vendor Oscar for customer chat sentiment analysis.",
+  "constraints": {
+    "budget_usd": 200000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "rejected",
+  "rationale": "Sentiment analysis required access to raw chat transcripts containing PII.",
+  "approver_role": ["Security", "Legal"],
+  "tags": ["chat", "privacy"]
+},
+{
+  "decision_id": "DEC-043",
+  "date": "2026-05-28",
+  "domain": "security",
+  "request_summary": "Decision to introduce annual review of all vendor monitoring tools.",
+  "constraints": {
+    "budget_usd": null,
+    "soc2_required": false,
+    "data_residency": "global"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Annual review ensures monitoring vendors remain compliant over time.",
+  "approver_role": ["Security"],
+  "tags": ["governance", "monitoring"]
+},
+{
+  "decision_id": "DEC-044",
+  "date": "2026-06-06",
+  "domain": "procurement",
+  "request_summary": "Approval of Vendor Alpha for pilot usage in new geographic region.",
+  "constraints": {
+    "budget_usd": 410000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Pilot remained within existing compliance boundaries and data residency controls.",
+  "approver_role": ["IT Operations", "Security"],
+  "tags": ["pilot", "expansion"]
+},
+{
+  "decision_id": "DEC-045",
+  "date": "2026-06-14",
+  "domain": "procurement",
+  "request_summary": "Proposal to onboard Vendor Papa for CRM enrichment.",
+  "constraints": {
+    "budget_usd": 275000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "rejected",
+  "rationale": "CRM enrichment required transfer of customer identifiers to third-party systems.",
+  "approver_role": ["Security", "Legal"],
+  "tags": ["crm", "privacy"]
+},
+{
+  "decision_id": "DEC-046",
+  "date": "2026-06-22",
+  "domain": "security",
+  "request_summary": "Decision to mandate data minimization for all customer analytics vendors.",
+  "constraints": {
+    "budget_usd": null,
+    "soc2_required": false,
+    "data_residency": "global"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Data minimization reduces exposure risk across analytics tooling.",
+  "approver_role": ["Security", "Legal"],
+  "tags": ["policy", "data-minimization"]
+},
+{
+  "decision_id": "DEC-047",
+  "date": "2026-07-01",
+  "domain": "procurement",
+  "request_summary": "Renewal of Vendor Hotel following scope clarification.",
+  "constraints": {
+    "budget_usd": 135000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Scope clarification confirmed no customer-facing data exposure.",
+  "approver_role": ["IT Operations", "Security"],
+  "tags": ["renewal", "incident-management"]
+},
+{
+  "decision_id": "DEC-048",
+  "date": "2026-07-09",
+  "domain": "procurement",
+  "request_summary": "Request to approve Vendor Beta for short-term analytics during migration.",
+  "constraints": {
+    "budget_usd": 480000,
+    "soc2_required": true,
+    "data_residency": "EU"
+  },
+  "decision_outcome": "override",
+  "rationale": "Temporary exception approved to support system migration with strict access controls.",
+  "approver_role": ["Security", "VP Engineering"],
+  "tags": ["migration", "override"]
+},
+{
+  "decision_id": "DEC-049",
+  "date": "2026-07-18",
+  "domain": "security",
+  "request_summary": "Decision to escalate vendors with three or more overrides within a year.",
+  "constraints": {
+    "budget_usd": null,
+    "soc2_required": false,
+    "data_residency": "global"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Repeated overrides indicate systemic risk requiring executive oversight.",
+  "approver_role": ["Security"],
+  "tags": ["drift", "overrides"]
+},
+{
+  "decision_id": "DEC-050",
+  "date": "2026-07-26",
+  "domain": "procurement",
+  "request_summary": "Renewal of Vendor Alpha following annual compliance review.",
+  "constraints": {
+    "budget_usd": 420000,
+    "soc2_required": true,
+    "data_residency": "US"
+  },
+  "decision_outcome": "approved",
+  "rationale": "Annual review confirmed continued compliance and acceptable risk posture.",
+  "approver_role": ["IT Operations", "Security", "Finance"],
+  "tags": ["renewal", "compliance"]
+}
+
 ]
 
