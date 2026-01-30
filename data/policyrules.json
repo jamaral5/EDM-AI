@@ -1,1 +1,165 @@
+[
+  {
+    "rule_id": "POL-SEC-001",
+    "description": "Vendors that handle customer PII must be SOC 2 Type II compliant before production use.",
+    "severity": "high",
+    "applies_to": ["procurement", "security"],
+    "required_fields": ["pii_handling", "soc2_status", "data_classification"],
+    "required_approvals": ["Security", "Legal"],
+    "exceptions": "Allowed only for time-limited proofs of concept using synthetic data with Security approval."
+  },
+  {
+    "rule_id": "POL-COM-002",
+    "description": "EU customer data must remain in EU regions (storage and processing).",
+    "severity": "high",
+    "applies_to": ["procurement", "security"],
+    "required_fields": ["data_residency", "customer_region", "data_processing_locations"],
+    "required_approvals": ["Security", "Legal"],
+    "exceptions": "Exceptions require Legal sign-off and documented compensating controls."
+  },
+  {
+    "rule_id": "POL-LEG-003",
+    "description": "No vendor may be onboarded without an executed Data Processing Addendum (DPA) when customer data is involved.",
+    "severity": "high",
+    "applies_to": ["procurement"],
+    "required_fields": ["dpa_status", "data_classification"],
+    "required_approvals": ["Legal"],
+    "exceptions": "No exceptions for production systems."
+  },
+  {
+    "rule_id": "POL-SEC-004",
+    "description": "Vendors must disclose subprocessors when they will store or process customer data.",
+    "severity": "medium",
+    "applies_to": ["procurement"],
+    "required_fields": ["subprocessor_list", "data_classification"],
+    "required_approvals": ["Security"],
+    "exceptions": "Temporary exception allowed for internal-only data with Security approval."
+  },
+  {
+    "rule_id": "POL-FIN-005",
+    "description": "Purchases over $100,000 require approval from IT Operations and the budget owner.",
+    "severity": "medium",
+    "applies_to": ["procurement"],
+    "required_fields": ["budget_usd", "budget_owner"],
+    "required_approvals": ["IT Operations"],
+    "exceptions": "Emergency approvals must be documented and reviewed within 30 days."
+  },
+  {
+    "rule_id": "POL-FIN-006",
+    "description": "Purchases over $250,000 require Security review in addition to standard procurement approvals.",
+    "severity": "medium",
+    "applies_to": ["procurement"],
+    "required_fields": ["budget_usd", "vendor_name", "service_category"],
+    "required_approvals": ["Security", "IT Operations"],
+    "exceptions": "No exceptions for vendors handling customer data."
+  },
+  {
+    "rule_id": "POL-FIN-007",
+    "description": "Purchases over $500,000 require VP-level approval.",
+    "severity": "medium",
+    "applies_to": ["procurement"],
+    "required_fields": ["budget_usd", "business_justification"],
+    "required_approvals": ["VP Engineering"],
+    "exceptions": "Expedited approvals allowed for renewals with unchanged scope."
+  },
+  {
+    "rule_id": "POL-SEC-008",
+    "description": "Any vendor used in production must have an incident notification process and response SLA documented.",
+    "severity": "medium",
+    "applies_to": ["procurement"],
+    "required_fields": ["incident_sla", "support_sla"],
+    "required_approvals": ["Security", "IT Operations"],
+    "exceptions": "None for production systems."
+  },
+  {
+    "rule_id": "POL-SEC-009",
+    "description": "Customer telemetry and logs are classified as sensitive data and require Security review before vendor onboarding.",
+    "severity": "high",
+    "applies_to": ["procurement", "security"],
+    "required_fields": ["data_classification", "service_category"],
+    "required_approvals": ["Security"],
+    "exceptions": "POCs must use synthetic or redacted data only."
+  },
+  {
+    "rule_id": "POL-SEC-010",
+    "description": "If a vendor cannot meet a required control (SOC2, residency, DPA), the request must include compensating controls and an explicit exception request.",
+    "severity": "high",
+    "applies_to": ["procurement", "security"],
+    "required_fields": ["exception_request", "compensating_controls", "risk_acceptance_owner"],
+    "required_approvals": ["Security", "Legal"],
+    "exceptions": "Exception must be time-bound and tracked with a review date."
+  },
+  {
+    "rule_id": "POL-OPS-011",
+    "description": "Production vendors must support SSO (SAML/OIDC) for administrative access.",
+    "severity": "medium",
+    "applies_to": ["procurement"],
+    "required_fields": ["sso_support", "environment_scope"],
+    "required_approvals": ["IT Operations"],
+    "exceptions": "Allowed only if access is limited and MFA is enforced."
+  },
+  {
+    "rule_id": "POL-OPS-012",
+    "description": "Vendors must support audit logging for administrative actions in production.",
+    "severity": "medium",
+    "applies_to": ["procurement", "security"],
+    "required_fields": ["audit_logging", "environment_scope"],
+    "required_approvals": ["Security"],
+    "exceptions": "Temporary exceptions require compensating controls and a remediation plan."
+  },
+  {
+    "rule_id": "POL-SEC-013",
+    "description": "All vendors must complete a security questionnaire before contract execution if they process customer data.",
+    "severity": "medium",
+    "applies_to": ["procurement"],
+    "required_fields": ["security_questionnaire_status", "data_classification"],
+    "required_approvals": ["Security"],
+    "exceptions": "No exceptions for vendors handling PII."
+  },
+  {
+    "rule_id": "POL-LEG-014",
+    "description": "Contracts must include data breach notification timelines consistent with company policy.",
+    "severity": "medium",
+    "applies_to": ["procurement"],
+    "required_fields": ["breach_notification_timeline"],
+    "required_approvals": ["Legal"],
+    "exceptions": "Exceptions require General Counsel approval."
+  },
+  {
+    "rule_id": "POL-SEC-015",
+    "description": "Vendors must provide encryption at rest and in transit for customer data.",
+    "severity": "high",
+    "applies_to": ["procurement", "security"],
+    "required_fields": ["encryption_at_rest", "encryption_in_transit", "data_classification"],
+    "required_approvals": ["Security"],
+    "exceptions": "No exceptions for PII."
+  },
+  {
+    "rule_id": "POL-SEC-016",
+    "description": "Internal-only tools that do not process customer data may be approved without SOC 2, provided the data classification is documented as internal.",
+    "severity": "low",
+    "applies_to": ["procurement"],
+    "required_fields": ["data_classification"],
+    "required_approvals": ["IT Operations"],
+    "exceptions": "If scope changes to include customer data, this rule no longer applies."
+  },
+  {
+    "rule_id": "POL-GOV-017",
+    "description": "All approved exceptions must have a defined expiration date and an owner responsible for review.",
+    "severity": "high",
+    "applies_to": ["procurement", "security"],
+    "required_fields": ["exception_expiration_date", "risk_acceptance_owner"],
+    "required_approvals": ["Security"],
+    "exceptions": "None."
+  },
+  {
+    "rule_id": "POL-GOV-018",
+    "description": "Overrides must document why precedent was not followed and must reference at least one compensating control.",
+    "severity": "high",
+    "applies_to": ["procurement", "security"],
+    "required_fields": ["override_justification", "precedent_referenced", "compensating_controls"],
+    "required_approvals": ["Security", "Legal"],
+    "exceptions": "None."
+  }
+]
 
