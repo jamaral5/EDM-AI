@@ -7,32 +7,38 @@ This document outlines two demonstration scenarios used to showcase how Preceden
 ## Scenario 1: Preventing a Repeat Compliance Mistake
 
 ### Context
-A product team is requesting approval to onboard a new log management vendor to support EU customer environments. The request is time-sensitive due to operational pressure.
+A product team wants to quickly approve a new vendor to handle logs for EU customers. It is costly and touches customer data, but they’re under time pressure.
 
-### Input (Decision Intake)
-"We need to approve Vendor Beta for centralized log aggregation for EU customers.  
-Estimated annual cost is $500,000.  
-This vendor will process customer telemetry and logs.  
-We need to move quickly to support upcoming launches."
+### Decision Dialog:
+“We need to approve Vendor Beta fast.
+It’ll cost $500k a year.
+They’ll handle EU customer data.
+We need this for an upcoming launch.”
 
-### System Actions
-- The Decision Intake Agent extracts key attributes (vendor, budget, data region, data classification).
-- The Decision Memory Agent identifies a prior decision involving the same vendor.
-- The Policy Interpreter Agent evaluates applicable compliance requirements.
-- The Consistency & Drift Detection Agent assesses alignment with past decisions and recent governance trends.
+### What EDM AI Does:
+- Pulls out the important details (vendor name, cost, EU data, sensitive info)
+- Checks past decisions
+- Checks company policies and compliance rules
+- Looks for patterns where teams have recently bent the rules
 
-### Key Findings
-- A previous decision (DEC-002) rejected Vendor Beta due to EU data residency and subprocessor concerns.
-- Current request triggers multiple high-severity policies, including EU data residency and SOC 2 requirements.
-- Drift analysis indicates an increase in recent overrides related to similar vendors.
+### What it Finds:
+- This exact vendor was rejected before for EU data issues
+- The request breaks multiple compliance rules (EU data residency, SOC 2)
+- Teams have recently been overriding similar rules more often (a red flag)
 
-### Output (Recommendation)
+### Recommendation:
 **Decision:** Do Not Approve (Pending Remediation)  
-**Rationale:** The request conflicts with prior precedent and violates established compliance policies.  
-**Recommendation:** Require documented EU-only data residency guarantees and completion of a third-party security audit before reconsideration.
 
-### Outcome
-A potential repeat compliance failure is avoided, and the team is provided with a clear, actionable path forward.
+Why:
+- This goes against a past decision
+- It breaks established compliance rules
+
+What to Do Instead:
+- Require proof that EU data stays in the EU
+- Require a security audit before reconsidering
+
+### Outcome:
+The company avoids repeating a compliance failure and gives the team a clear checklist to move forward safely.
 
 ---
 
