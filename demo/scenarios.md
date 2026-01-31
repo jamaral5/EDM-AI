@@ -4,7 +4,7 @@ This document outlines two demonstration scenarios used to showcase how Preceden
 
 ---
 
-## Scenario 1: Preventing a Repeat Compliance Mistake
+## Scenario 1: Preventing a Compliance Mistake from Happening Again
 
 ### Context
 A product team wants to quickly approve a new vendor to handle logs for EU customers. It is costly and touches customer data, but they’re under time pressure.
@@ -27,13 +27,13 @@ We need this for an upcoming launch.”
 - Teams have recently been overriding similar rules more often (a red flag)
 
 ### Recommendation:
-**Decision:** Do Not Approve (Pending Remediation)  
+**Decision:** Do Not Approve.
 
-Why:
+**Why:**
 - This goes against a past decision
 - It breaks established compliance rules
 
-What to Do Instead:
+**What to Do Instead:**
 - Require proof that EU data stays in the EU
 - Require a security audit before reconsidering
 
@@ -42,27 +42,28 @@ The company avoids repeating a compliance failure and gives the team a clear che
 
 ---
 
-## Scenario 2: Capturing Institutional Knowledge for Future Decisions
+## Scenario 2: Remembering a New Rule So People Do Not Forget Later
 
 ### Context
-The Security and Legal teams approve a new policy intended to standardize vendor security requirements across the organization.
+Security and Legal teams approve a new rule regarding how vendors handle customer data.
 
-### Input (Decision Intake)
-"Effective immediately, all third-party vendors that handle customer PII must maintain SOC 2 Type II certification prior to production use."
+### Decision Dialog:
+“Any vendor that handles customer PII must have SOC 2 Type II certification before going live.”
 
-### System Actions
-- The Decision Intake Agent identifies the request as a policy-level decision.
-- The Rationale Extractor captures the intent, scope, and enforcement conditions.
-- The Decision Ledger Agent records the policy decision as institutional precedent.
+### What EDM AI Does:
+- Recognizes this is a policy decision, not just a one-off approval
+- Records the rule, why it exists, and where it applies
+- Saves it as official company knowledge
 
-### Output (Decision Recorded)
+### What it Finds:
 **Decision:** Approved  
-**Scope:** All procurement and security reviews involving customer data  
-**Rationale:** Standardizes security expectations, reduces vendor risk, and aligns with regulatory obligations.  
-**Enforcement:** This policy will be automatically evaluated during future vendor approval requests.
+**From now on:**
+- Every vendor request involving customer data is automatically checked against this rule
+- No one has to “remember” it
+- The rule is enforced consistently, even when teams change
 
-### Outcome
-The organization’s institutional memory is updated, ensuring consistent enforcement of the policy in future decisions without relying on individual recollection.
+### Outcome:
+The organization’s institutional memory is updated, making sure the policy is enforced in future decisions.
 
 ---
 
