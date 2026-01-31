@@ -24,7 +24,7 @@ EDM AI addresses this by acting as an offocial memory for decisions.
 
 ---
 
-## Our Six Agents, Consolodated:
+## Our Six Agents, Consolidated:
 
 ### 1. Decision Intake and Context
 When a request is made, the agent extracts information such as:
