@@ -1,139 +1,152 @@
-# PrecedentAI
-**Institutional Memory and Decision Governance for Enterprises**
+# PrecedentAI – Decision Intake & Consistency Agent
+
+## Overview
+PrecedentAI is an enterprise decision-intake and governance agent built using watsonx Orchestrate.  
+Its purpose is to help organizations evaluate **high-impact decisions** by making **institutional precedent and policy alignment visible**, without automating approvals or rejections.
+
+The agent supports **human-in-the-loop decision making** by:
+- structuring unclear decision requests
+- surfacing relevant historical precedents
+- checking alignment with enterprise policies
+- explicitly signaling whether a request is consistent with past decisions
+
+PrecedentAI does **not** make decisions. It provides structured analysis so humans can decide with context.
 
 ---
 
-## Problem Statement
+## What Problem This Solves
+In large organizations:
+- Similar decisions are often handled inconsistently over time
+- Context from past decisions is lost
+- Teams repeat mistakes or bypass controls unintentionally
+- Governance teams are forced to manually reconstruct precedent
 
-Enterprises make thousands of decisions every year across procurement, security, legal, and engineering teams.  
-However, the rationale behind these decisions is often lost over time—buried in emails, chat threads, tickets, or held only in people’s memories.
-
-As a result:
-- Teams repeatedly re-litigate the same decisions
-- Past rejections are forgotten and mistakes are repeated
-- Policies are inconsistently enforced
-- Risk tolerance gradually shifts without visibility or intent
-
-This loss of institutional memory leads to **increased compliance risk, inconsistent governance, and costly errors**.
+PrecedentAI addresses this by acting as **institutional memory** for decisions.
 
 ---
 
-## Solution Overview
+## Agent Responsibilities
 
-**PrecedentAI** is a multi-agent system built with **IBM watsonx Orchestrate** that captures how decisions are made and enforces consistency over time.
+### 1. Decision Intake & Context Extraction
+When a request is submitted, the agent extracts key information such as:
+- decision domain
+- summary of the request
+- budget or cost (if provided)
+- data sensitivity
+- compliance constraints
+- timeline or urgency
+- stakeholders or requesting teams
 
-Rather than acting as a simple search or chatbot tool, PrecedentAI models the **decision lifecycle**:
-- Intake of new decision requests
-- Retrieval of relevant historical precedents
-- Policy interpretation and enforcement
-- Detection of inconsistencies and governance drift
-- Recommendation with explainable tradeoffs
-- Recording of final decisions as auditable institutional memory
-
-Each decision strengthens the system, reducing reliance on tribal knowledge and manual oversight.
-
----
-
-## Key Capabilities
-
-### 1. Decision Memory
-PrecedentAI maintains a structured record of past decisions, including:
-- What was decided
-- Why it was decided
-- Constraints and risks considered
-- Who approved it
-
-This allows new decisions to be evaluated in the context of organizational precedent.
-
-### 2. Policy-Aware Enforcement
-Enterprise policies (e.g., SOC 2 requirements, data residency, budget thresholds) are interpreted and applied consistently during decision evaluation.
-
-Violations and missing requirements are explicitly identified rather than implicitly assumed.
-
-### 3. Consistency and Drift Detection
-PrecedentAI compares new requests against past decisions to:
-- Flag contradictions
-- Highlight repeat exceptions
-- Surface trends indicating policy drift over time
-
-This enables proactive governance rather than reactive review.
-
-### 4. Explainable Recommendations
-Instead of binary approvals or rejections, the system produces structured recommendations that include:
-- Referenced precedents
-- Policy impacts
-- Risk tradeoffs
-- Clear next steps
-
-### 5. Institutional Learning
-Final decisions—including overrides and exceptions—are recorded in a decision ledger, ensuring that future decisions benefit from prior context and justification.
+If information is missing or unclear, the agent explicitly lists those gaps.
 
 ---
 
-## Architecture and Agent Design
+### 2. Precedent Search
+The agent invokes a Precedent Search Tool to find historically similar decisions based on:
+- decision type
+- data sensitivity
+- regulatory context
+- budget range
+- approval outcomes
 
-PrecedentAI is implemented as a **multi-agent system** using watsonx Orchestrate, with each agent responsible for a distinct role:
-
-- **Decision Intake Agent**  
-  Parses incoming requests and extracts structured decision attributes.
-
-- **Decision Memory Agent**  
-  Retrieves and ranks relevant past decisions based on similarity.
-
-- **Policy & Constraint Interpreter Agent**  
-  Evaluates applicable enterprise policies and identifies violations or missing information.
-
-- **Consistency & Drift Detection Agent**  
-  Compares current decisions to precedent and analyzes governance trends over time.
-
-- **Recommendation & Tradeoff Agent**  
-  Synthesizes findings into an explainable recommendation.
-
-- **Decision Ledger Agent**  
-  Records the final decision and rationale as institutional memory.
-
-Agents collaborate through watsonx Orchestrate, demonstrating end-to-end orchestration rather than isolated automation.
+Results may include both approvals and rejections.
 
 ---
 
-## Demo Scenarios
+### 3. Consistency & Drift Signal (Always Emitted)
+After reviewing historical precedents, the agent produces a **Consistency & Drift Signal**.
 
-The demo includes two scenarios:
+This section answers one question:
+> *Does this request align with how similar decisions were handled in the past?*
 
-1. **Preventing a Repeat Compliance Mistake**  
-   A time-sensitive vendor approval request is evaluated against past rejections and current policies, preventing a costly repeat error.
+Possible classifications:
+- **Consistent** – aligns with historical outcomes
+- **Conditionally Consistent** – similar decisions were approved only after additional controls
+- **Deviating** – would break established decision patterns
+- **No Established Precedent** – represents a novel scenario
 
-2. **Capturing Institutional Knowledge**  
-   A new security policy is approved and recorded, ensuring consistent enforcement across future decisions.
-
-Full demo scripts are available in `demo/scenarios.md`.
-
----
-
-## Why watsonx Orchestrate
-
-watsonx Orchestrate enables PrecedentAI to:
-- Model complex, real-world decision workflows
-- Coordinate multiple specialized agents
-- Integrate knowledge, tools, and human-in-the-loop approvals
-- Provide explainability and governance required for enterprise AI adoption
-
-This solution aligns directly with enterprise needs for **trusted, auditable, and scalable AI systems**.
+This signal **does not recommend approve or reject**.  
+It simply makes alignment or deviation visible.
 
 ---
 
-## Impact
+### 4. Policy Check
+The agent evaluates the request against enterprise policies, such as:
+- data privacy and GDPR
+- information security
+- vendor risk management
+- financial controls
+- change management
 
+The output highlights:
+- compliant areas
+- insufficient information
+- required approvals or documentation
+
+---
+
+### 5. Optional Drift Analysis (Escalation Only)
+Trend-level drift analysis is only invoked when:
+- repeated overrides are detected
+- conflicting historical outcomes emerge
+- policy enforcement appears to be weakening over time
+
+This prevents unnecessary noise and escalation.
+
+---
+
+## Synthetic Data & Demonstration Context
+
+All historical decisions, precedents, mergers, acquisitions, vendors, budgets, and policies used by PrecedentAI in this project are **synthetic and fictional**.
+
+They were intentionally created to:
+- simulate realistic enterprise decision histories
+- model past vendor onboarding, security approvals, and cross-border mergers
+- demonstrate how institutional memory and precedent enforcement would function in a real organization
+
+No real companies, transactions, or proprietary data are referenced.
+
+The structure, tone, and governance logic reflect **real-world enterprise practices**, but the data itself is **fabricated solely for demonstration and evaluation purposes**.
+
+This approach allows the system to demonstrate:
+- decision consistency analysis
+- governance pattern recognition
+- drift detection behavior
+- human-in-the-loop decision support
+
+without exposing sensitive or confidential information.
+
+---
+
+## Design Principles
+- **Human-in-the-loop**: The agent never makes final decisions
+- **Explainability first**: All conclusions are traceable to precedent or policy
+- **Restraint**: Advanced analysis is only triggered when justified
+- **Enterprise realism**: Mirrors real governance workflows
+
+---
+
+## Example Use Cases
+- Vendor onboarding and renewals
+- Cross-border data handling decisions
+- Security and compliance approvals
+- Mergers & acquisitions intake
+- High-risk operational changes
+
+---
+
+## Why This Matters
 PrecedentAI helps organizations:
-- Reduce repeat mistakes
-- Enforce policies consistently
-- Improve auditability and compliance
-- Preserve institutional knowledge despite employee turnover
-- Make faster, better-informed decisions at scale
+- enforce decision consistency
+- reduce governance risk
+- preserve institutional knowledge
+- improve auditability
+- avoid repeating past mistakes
+
+It transforms decision history into an active governance asset.
 
 ---
 
-## Team
-
-Built as part of the IBM AI Demystified Hackathon using watsonx Orchestrate.
-
+## Disclaimer
+PrecedentAI does not approve, reject, or replace human judgment.  
+All outputs are advisory and intended to support responsible enterprise decision making.
