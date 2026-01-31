@@ -1,6 +1,6 @@
-# PrecedentAI – Demo Scenarios
+# EDM AI – Demo Scenarios
 
-This document outlines two demonstration scenarios used to showcase how PrecedentAI captures institutional knowledge, enforces decision consistency, and prevents costly repeat mistakes.
+This document offers two demonstration scenarios to showcase how EDM AI captures tendencies, implements decision consistency, and prevents costly mistakes.
 
 ---
 
