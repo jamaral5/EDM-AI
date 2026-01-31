@@ -27,7 +27,8 @@ We need this for an upcoming launch.”
 - Teams have recently been overriding similar rules more often (a red flag)
 
 ### Recommendation:
-**Decision:** Do Not Approve.
+**Decision:** 
+Do Not Approve.
 
 **Why:**
 - This goes against a past decision
@@ -56,7 +57,9 @@ Security and Legal teams approve a new rule regarding how vendors handle custome
 - Saves it as official company knowledge
 
 ### What it Finds:
-**Decision:** Approved  
+**Decision:** 
+Approved  
+
 **From now on:**
 - Every vendor request involving customer data is automatically checked against this rule
 - No one has to “remember” it
@@ -67,9 +70,6 @@ The organization’s institutional memory is updated, making sure the policy is 
 
 ---
 
-## Summary
-These scenarios demonstrate how PrecedentAI:
-- Prevents repeat mistakes by referencing past decisions
-- Enforces compliance through policy-aware recommendations
-- Learns over time by capturing and applying institutional knowledge
+## Summary:
+EDM AI is a company’s long-term memory and rule enforcer. It makes sure decisions are compliant, consistent, and concise.
 
