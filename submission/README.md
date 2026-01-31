@@ -1,152 +1,114 @@
-# PrecedentAI – Decision Intake & Consistency Agent
+# EDM AI – Enterprise Descision Intake/Making AI
 
-## Overview
-PrecedentAI is an enterprise decision-intake and governance agent built using watsonx Orchestrate.  
-Its purpose is to help organizations evaluate **high-impact decisions** by making **institutional precedent and policy alignment visible**, without automating approvals or rejections.
+## Overview:
+EDM AI's purpose is to help companiess evaluate potentially impactful decisions by making visible precedents and policy alignments, without automating approvals or rejections.
 
-The agent supports **human-in-the-loop decision making** by:
-- structuring unclear decision requests
-- surfacing relevant historical precedents
-- checking alignment with enterprise policies
-- explicitly signaling whether a request is consistent with past decisions
+The agent supports human decision making by:
+- reinterpreting/restructuring unclear decision requests
+- surfacing any relevant past precedents
+- confirming alignment with company policies
+- explicitly notifying whether a request is consistent with past company decisions
 
-PrecedentAI does **not** make decisions. It provides structured analysis so humans can decide with context.
+EDM AI does not make decisions, but provides an analysis so humans can decide with context.
 
 ---
 
 ## What Problem This Solves
-In large organizations:
-- Similar decisions are often handled inconsistently over time
+In large companies:
+- Similar decisions can be handled inconsistently
 - Context from past decisions is lost
-- Teams repeat mistakes or bypass controls unintentionally
+- Teams mistakingly repeat mistakes or ignore controls
 - Governance teams are forced to manually reconstruct precedent
 
-PrecedentAI addresses this by acting as **institutional memory** for decisions.
+EDM AI addresses this by acting as an offocial memory for decisions.
 
 ---
 
-## Agent Responsibilities
+## Agent Roles
 
 ### 1. Decision Intake & Context Extraction
-When a request is submitted, the agent extracts key information such as:
+When a request is made, the agent extracts information such as:
 - decision domain
 - summary of the request
 - budget or cost (if provided)
 - data sensitivity
 - compliance constraints
-- timeline or urgency
-- stakeholders or requesting teams
+- timeline (urgency)
+- stakeholders
 
-If information is missing or unclear, the agent explicitly lists those gaps.
+If information is missing, the agent identifies and lists those gaps.
 
----
 
 ### 2. Precedent Search
-The agent invokes a Precedent Search Tool to find historically similar decisions based on:
+The agent finds historically similar decisions based on:
 - decision type
 - data sensitivity
-- regulatory context
+- context
 - budget range
 - approval outcomes
 
 Results may include both approvals and rejections.
 
----
 
-### 3. Consistency & Drift Signal (Always Emitted)
-After reviewing historical precedents, the agent produces a **Consistency & Drift Signal**.
+### 3. Consistency & Drift Signal
+After reviewing historical precedents, the agent produces a "Consistency & Drift Signal".
 
 This section answers one question:
-> *Does this request align with how similar decisions were handled in the past?*
+"Does this request align with how similar decisions were handled in the past?"
 
 Possible classifications:
-- **Consistent** – aligns with historical outcomes
+- **Consistent** – aligns with past outcomes
 - **Conditionally Consistent** – similar decisions were approved only after additional controls
 - **Deviating** – would break established decision patterns
-- **No Established Precedent** – represents a novel scenario
+- **No Established Precedent** – a unique scenario
 
-This signal **does not recommend approve or reject**.  
-It simply makes alignment or deviation visible.
+This signal does not recommend approve or reject.  
+It makes alignment or deviation visible.
 
----
 
 ### 4. Policy Check
-The agent evaluates the request against enterprise policies, such as:
+The agent compares the request against company policies such as:
 - data privacy and GDPR
 - information security
 - vendor risk management
 - financial controls
 - change management
 
-The output highlights:
+The output recognizes:
 - compliant areas
 - insufficient information
-- required approvals or documentation
+- required approvals
+- required documentation
 
----
 
-### 5. Optional Drift Analysis (Escalation Only)
-Trend-level drift analysis is only invoked when:
+### 5. Optional Drift Analysis
+Drift analysis is only called when:
 - repeated overrides are detected
-- conflicting historical outcomes emerge
-- policy enforcement appears to be weakening over time
+- conflicting historical outcomes come up
+- policy enforcement seems to be weakening over time
 
-This prevents unnecessary noise and escalation.
-
----
-
-## Synthetic Data & Demonstration Context
-
-All historical decisions, precedents, mergers, acquisitions, vendors, budgets, and policies used by PrecedentAI in this project are **synthetic and fictional**.
-
-They were intentionally created to:
-- simulate realistic enterprise decision histories
-- model past vendor onboarding, security approvals, and cross-border mergers
-- demonstrate how institutional memory and precedent enforcement would function in a real organization
-
-No real companies, transactions, or proprietary data are referenced.
-
-The structure, tone, and governance logic reflect **real-world enterprise practices**, but the data itself is **fabricated solely for demonstration and evaluation purposes**.
-
-This approach allows the system to demonstrate:
-- decision consistency analysis
-- governance pattern recognition
-- drift detection behavior
-- human-in-the-loop decision support
-
-without exposing sensitive or confidential information.
+This prevents escalation.
 
 ---
 
-## Design Principles
-- **Human-in-the-loop**: The agent never makes final decisions
-- **Explainability first**: All conclusions are traceable to precedent or policy
-- **Restraint**: Advanced analysis is only triggered when justified
-- **Enterprise realism**: Mirrors real governance workflows
+## Synthetic Data & Demonstration:
+
+All decisions, precedents, mergers, acquisitions, vendors, budgets, and policies used by EDM AI in this project are fake.
+
+They were created to
+- demonstrate a realistic decision history
+- simulate past security approvals and cross-border mergers
+- show how an official memory and precedent enforcement would work in a real company
+
+No real companies, transactions, or data are used for the purpose of this hackathon.
 
 ---
 
 ## Example Use Cases
-- Vendor onboarding and renewals
-- Cross-border data handling decisions
-- Security and compliance approvals
-- Mergers & acquisitions intake
-- High-risk operational changes
+- Vendor on-boarding and renewals
+- Cross-border data handling
+- Security/compliance approvals
+- Mergers and acquisitions
+- High-risk operating changes
 
----
 
-## Why This Matters
-PrecedentAI helps organizations:
-- enforce decision consistency
-- reduce governance risk
-- preserve institutional knowledge
-- improve auditability
-- avoid repeating past mistakes
-
-It transforms decision history into an active governance asset.
-
----
-
-## Disclaimer
-PrecedentAI does not approve, reject, or replace human judgment.  
-All outputs are advisory and intended to support responsible enterprise decision making.
