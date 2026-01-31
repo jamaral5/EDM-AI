@@ -24,9 +24,9 @@ EDM AI addresses this by acting as an offocial memory for decisions.
 
 ---
 
-## Agent Roles
+## Our Six Agents, Consolodated:
 
-### 1. Decision Intake & Context Extraction
+### 1. Decision Intake and Context
 When a request is made, the agent extracts information such as:
 - decision domain
 - summary of the request
@@ -39,7 +39,7 @@ When a request is made, the agent extracts information such as:
 If information is missing, the agent identifies and lists those gaps.
 
 
-### 2. Precedent Search
+### 2. Decision Memory
 The agent finds historically similar decisions based on:
 - decision type
 - data sensitivity
@@ -50,7 +50,7 @@ The agent finds historically similar decisions based on:
 Results may include both approvals and rejections.
 
 
-### 3. Consistency & Drift Signal
+### 3. Consistency & Drift Detection
 After reviewing historical precedents, the agent produces a "Consistency & Drift Signal".
 
 This section answers one question:
@@ -66,7 +66,16 @@ This signal does not recommend approve or reject.
 It makes alignment or deviation visible.
 
 
-### 4. Policy Check
+### 4. Decision Ledger 
+This agent makes a record of finalized decisions. As a result, it:
+
+- stores important details like context, reasons, and who was involved
+- allows the system to look up similar past decisions for reference
+- helps teams understand how and why decisions were made before
+- supports transparency and audits by preserving decision history
+
+
+### 5. Policy Constraint and Interpretation
 The agent compares the request against company policies such as:
 - data privacy and GDPR
 - information security
@@ -81,7 +90,7 @@ The output recognizes:
 - required documentation
 
 
-### 5. Optional Drift Analysis
+### 6. Optional Drift Analysis
 Drift analysis is only called when:
 - repeated overrides are detected
 - conflicting historical outcomes come up
