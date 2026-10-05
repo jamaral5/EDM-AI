@@ -121,4 +121,4 @@ No real companies, transactions, or data are used for the purpose of this hackat
 - Cross-border data handling
 - Security/compliance approvals
 - Mergers and acquisitions
-- High-risk operating changes
+- High risk operating changes
